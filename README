@@ -1,0 +1,5 @@
+Zend Framework layer profile
+
+This can be used to profile each layer within the application to highlight performance issues.
+
+Initially starting in the model layer, this will be used to profile, datasource, then mappers & up through the stack.
