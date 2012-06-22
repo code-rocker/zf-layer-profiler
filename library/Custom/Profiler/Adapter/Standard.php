@@ -2,7 +2,9 @@
 /**
  * Profile adapter standard
  */
-class Custom_Profile_Adapter_Standard extends Custom_Profiler_Adapter_Core implements Custom_Profiler_Adapter_Interface
+require_once('Core.php');
+require_once('Interface.php');
+class Custom_Profiler_Adapter_Standard extends Custom_Profiler_Adapter_Core implements Custom_Profiler_Adapter_Interface
 {
 
     /**
