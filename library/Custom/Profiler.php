@@ -13,7 +13,7 @@ class Custom_Profiler
     /**
      * @var array
      */
-    protected static $_profiles;
+    protected static $_profiles = array();
 
     /**
      * Pass adapter on creation
@@ -38,11 +38,15 @@ class Custom_Profiler
     /**
      * Add profile
      *
-     * @param Custom_Profiler_Adapter_Interface $profile
+     * @param Custom_Profiler_Adapter_Interface|null $profile
      * @return Custom_Profiler
      */
-    public function addProfile(Custom_Profiler_Adapter_Interface $profile)
+    public function addProfile(Custom_Profiler_Adapter_Interface $profile = null)
     {
+        if (is_null($profile)) {
+            $profile = $this->getAdapter();
+        }
+
         self::$_profiles[] = $profile;
         return $this;
     }
