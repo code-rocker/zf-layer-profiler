@@ -28,7 +28,7 @@ class Custom_Profile_Adapter_Standard extends Custom_Profiler_Adapter_Core imple
      * @return string
      */
     public function getRequest(){
-
+        return $this->_request;
     }
 
     /**
