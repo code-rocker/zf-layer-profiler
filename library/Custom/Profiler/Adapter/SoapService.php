@@ -10,7 +10,7 @@ class Custom_Profiler_Adapter_SoapService implements Custom_Profiler_Adapter_Int
      *
      * @var string
      */
-    protected $_type = 'Webservice';
+    protected $_type = 'SoapService';
 
     /**
      * Soap client
