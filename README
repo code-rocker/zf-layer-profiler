@@ -3,3 +3,19 @@ Zend Framework layer profile
 This can be used to profile each layer within the application to highlight performance issues.
 
 Initially starting in the model layer, this will be used to profile, datasource, then mappers & up through the stack.
+
+== Example: Simple ==
+<?php
+// add 1st profile
+$adapter  = new Custom_Profiler_Adapter_Standard;
+$profiler = new Custom_Profiler($adapter);
+$profiler->addProfile();
+
+// add 2nd profile
+$adapter  = new Custom_Profiler_Adapter_SoapService;
+$profiler = new Custom_Profiler($adapter);
+$profiler->addProfile($adapter);
+
+// returns above profiles as an array
+$profiles = Custom_Profiler::getProfiles();
+?>
