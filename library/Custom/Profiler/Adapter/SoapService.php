@@ -12,7 +12,7 @@ class Custom_Profiler_Adapter_SoapService extends Custom_Profiler_Adapter_Core i
      *
      * @var string
      */
-    protected $_type = 'Webservice';
+    protected $_type = 'SoapService';
 
     /**
      * Soap client
