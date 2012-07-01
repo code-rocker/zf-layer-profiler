@@ -1,4 +1,7 @@
 <?php
+/**
+ * Test exception
+ */
 require_once(APPLICATION_LIBRARY . '/Custom/Profiler/Exception.php');
 
 class Test_Custom_Profiler_Exception extends BaseTestCase

@@ -1,4 +1,7 @@
 <?php
+/**
+ * Test profiler
+ */
 require_once(APPLICATION_LIBRARY . '/Custom/Profiler/Adapter/Standard.php');
 require_once(APPLICATION_LIBRARY . '/Custom/Profiler.php');
 
@@ -15,7 +18,7 @@ class Test_Custom_Profiler extends BaseTestCase
      */
     public function setUp()
     {
-        $adapter = new Custom_Profiler_Adapter_Standard;
+        $adapter       = new Custom_Profiler_Adapter_Standard;
         $this->_object = new Custom_Profiler($adapter);
     }
 
@@ -46,6 +49,9 @@ class Test_Custom_Profiler extends BaseTestCase
         $this->assertEquals(true, $this->_object->getAdapter() instanceof Custom_Profiler_Adapter_Standard);
     }
 
+    /**
+     * Ttest add profile with no parameters
+     */
     public function testAddProfileWithNoParams()
     {
         $addProfile = $this->_object->addProfile();
@@ -57,9 +63,12 @@ class Test_Custom_Profiler extends BaseTestCase
         $this->assertEquals(true, $profiles[0] instanceof Custom_Profiler_Adapter_Standard);
     }
 
+    /**
+     * Test add profile with profile
+     */
     public function testAddProfileWithProfile()
     {
-        $adapter = new Custom_Profiler_Adapter_Standard;
+        $adapter    = new Custom_Profiler_Adapter_Standard;
         $addProfile = $this->_object->addProfile($adapter);
         $this->assertEquals(true, $addProfile instanceof Custom_Profiler);
 
@@ -69,9 +78,12 @@ class Test_Custom_Profiler extends BaseTestCase
         $this->assertEquals(true, $profiles[0] instanceof Custom_Profiler_Adapter_Standard);
     }
 
+    /**
+     * Test get multiple profiles
+     */
     public function testGetMultipleProfiles()
     {
-        $adapter = new Custom_Profiler_Adapter_Standard;
+        $adapter  = new Custom_Profiler_Adapter_Standard;
         $profiler = new Custom_Profiler($adapter);
         $profiler->addProfile();
 
@@ -84,8 +96,6 @@ class Test_Custom_Profiler extends BaseTestCase
         $this->assertEquals(true, $profiles[0] instanceof Custom_Profiler_Adapter_Standard);
         $this->assertEquals(true, $profiles[1] instanceof Custom_Profiler_Adapter_Standard);
     }
-
-
 
 
 }

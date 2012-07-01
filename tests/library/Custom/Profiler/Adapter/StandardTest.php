@@ -1,9 +1,15 @@
 <?php
+/**
+ * Test standard adapter
+ */
 require_once(APPLICATION_LIBRARY . '/Custom/Profiler/Adapter/Standard.php');
 
 class Test_Custom_Profiler_Adapter_Standard extends BaseTestCase
 {
 
+    /**
+     * @var Custom_Profiler_Adapter_Standard
+     */
     public $_object;
 
     public function setUp()

@@ -31,11 +31,12 @@ class Custom_Profiler_Adapter_Standard extends Custom_Profiler_Adapter_Core impl
      * Set request
      *
      * @param string $request
+     *
      * @return Custom_Profile_Adapter_Standard
      */
     public function setRequest($request)
     {
-        $this->_request = (string) $request;
+        $this->_request = (string)$request;
         return $this;
     }
 
@@ -44,7 +45,8 @@ class Custom_Profiler_Adapter_Standard extends Custom_Profiler_Adapter_Core impl
      *
      * @return string
      */
-    public function getRequest(){
+    public function getRequest()
+    {
         return $this->_request;
     }
 
@@ -52,11 +54,12 @@ class Custom_Profiler_Adapter_Standard extends Custom_Profiler_Adapter_Core impl
      * Set response
      *
      * @param string $response
+     *
      * @return Custom_Profile_Adapter_Standard
      */
     public function setResponse($response)
     {
-        $this->_response = (string) $response;
+        $this->_response = (string)$response;
         return $this;
     }
 
@@ -74,11 +77,12 @@ class Custom_Profiler_Adapter_Standard extends Custom_Profiler_Adapter_Core impl
      * Set size
      *
      * @param int $size
+     *
      * @return Custom_Profile_Adapter_Standard
      */
     public function setSize($size)
     {
-        $this->_size = (int) $size;
+        $this->_size = (int)$size;
         return $this;
     }
 

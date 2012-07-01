@@ -30,5 +30,4 @@ interface Custom_Profiler_Adapter_Interface
     public function getSize();
 
 
-
 }

@@ -25,6 +25,7 @@ class Custom_Profiler_Adapter_SoapService extends Custom_Profiler_Adapter_Core i
      * Set soap client
      *
      * @param Zend_Soap_Client $client
+     *
      * @return Custom_Profile_Adapter_Standard
      */
     public function setSoapClient(Zend_Soap_Client $client)
@@ -48,7 +49,8 @@ class Custom_Profiler_Adapter_SoapService extends Custom_Profiler_Adapter_Core i
      *
      * @return string
      */
-    public function getRequest(){
+    public function getRequest()
+    {
         return $this->_client->getLastMethod();
     }
 

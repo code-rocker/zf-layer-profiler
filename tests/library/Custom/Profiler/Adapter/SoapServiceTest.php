@@ -3,6 +3,7 @@
  * Test soap service adapter
  */
 require_once(APPLICATION_LIBRARY . '/Custom/Profiler/Adapter/SoapService.php');
+
 class Test_Custom_Profiler_Adapter_SoapService extends BaseTestCase
 {
 

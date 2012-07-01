@@ -44,11 +44,12 @@ class Custom_Profiler_Adapter_Core
      * Set name
      *
      * @param string $name
+     *
      * @return Custom_Profiler_Adapter_Core
      */
     public function setName($name)
     {
-        $this->_name = (string) $name;
+        $this->_name = (string)$name;
         return $this;
     }
 
@@ -66,11 +67,12 @@ class Custom_Profiler_Adapter_Core
      * Set start time
      *
      * @param int $time
+     *
      * @return Custom_Profiler_Adapter_Core
      */
     public function setStartTime($time)
     {
-        $this->_startTime = (int) $time;
+        $this->_startTime = (int)$time;
         return $this;
     }
 
@@ -88,11 +90,12 @@ class Custom_Profiler_Adapter_Core
      * Set end time
      *
      * @param int $time
+     *
      * @return Custom_Profiler_Adapter_Core
      */
     public function setEndTime($time)
     {
-        $this->_endTime = (int) $time;
+        $this->_endTime = (int)$time;
         return $this;
     }
 

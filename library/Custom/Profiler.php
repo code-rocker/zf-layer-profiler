@@ -39,6 +39,7 @@ class Custom_Profiler
      * Add profile
      *
      * @param Custom_Profiler_Adapter_Interface|null $profile
+     *
      * @return Custom_Profiler
      */
     public function addProfile(Custom_Profiler_Adapter_Interface $profile = null)

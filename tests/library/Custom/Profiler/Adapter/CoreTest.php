@@ -1,4 +1,7 @@
 <?php
+/**
+ * Test core adapter
+ */
 require_once(APPLICATION_LIBRARY . '/Custom/Profiler/Adapter/Core.php');
 
 class Test_Custom_Profiler_Adapter_Core extends BaseTestCase
