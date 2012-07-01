@@ -2,7 +2,9 @@
 /**
  * Webservice adapter
  */
-class Custom_Profiler_Adapter_SoapService implements Custom_Profiler_Adapter_Interface
+require_once('Core.php');
+require_once('Interface.php');
+class Custom_Profiler_Adapter_SoapService extends Custom_Profiler_Adapter_Core implements Custom_Profiler_Adapter_Interface
 {
 
     /**
@@ -32,12 +34,22 @@ class Custom_Profiler_Adapter_SoapService implements Custom_Profiler_Adapter_Int
     }
 
     /**
+     * Get Soap client
+     *
+     * @return Zend_Soap_Client
+     */
+    public function getSoapClient()
+    {
+        return $this->_client;
+    }
+
+    /**
      * Get request
      *
      * @return string
      */
     public function getRequest(){
-        return $this->_request;
+        return $this->_client->getLastMethod();
     }
 
     /**
@@ -47,7 +59,7 @@ class Custom_Profiler_Adapter_SoapService implements Custom_Profiler_Adapter_Int
      */
     public function getResponse()
     {
-        return $this->_response;
+        return $this->_client->getLastResponse();
     }
 
     /**
@@ -57,7 +69,7 @@ class Custom_Profiler_Adapter_SoapService implements Custom_Profiler_Adapter_Int
      */
     public function getSize()
     {
-        return $this->_size;
+        return strlen($this->_client->getLastResponse());
     }
 
 }

@@ -13,6 +13,21 @@ class Custom_Profiler_Adapter_Standard extends Custom_Profiler_Adapter_Core impl
     protected $_type = 'Standard';
 
     /**
+     * @var string
+     */
+    protected $_request;
+
+    /**
+     * @var string
+     */
+    protected $_response;
+
+    /**
+     * @var int
+     */
+    protected $_size;
+
+    /**
      * Set request
      *
      * @param string $request

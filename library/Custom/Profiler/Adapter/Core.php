@@ -1,4 +1,7 @@
 <?php
+/**
+ * Adapter Core
+ */
 class Custom_Profiler_Adapter_Core
 {
 
@@ -22,26 +25,6 @@ class Custom_Profiler_Adapter_Core
      * @var int
      */
     protected $_endTime;
-
-    /**
-     * @var int
-     */
-    protected $_duration;
-
-    /**
-     * @var string
-     */
-    protected $_request;
-
-    /**
-     * @var string
-     */
-    protected $_response;
-
-    /**
-     * @var int
-     */
-    protected $_size;
 
     /**
      * @var array
