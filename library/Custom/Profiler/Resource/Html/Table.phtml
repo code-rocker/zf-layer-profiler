@@ -1,0 +1,25 @@
+<?php
+$profiles = Custom_Profiler::getProfiles();
+?>
+<table>
+    <thead>
+        <tr>
+            <td>Key</td>
+            <td>Type</td>
+            <td>Request</td>
+            <td>Response</td>
+            <td>Duration</td>
+            <td>Size</td>
+        </tr>
+    </thead>
+    <?php foreach($profiles as $k => $profile) { ?>
+    <tbody>
+        <tr><?php echo $k; ?></tr>
+        <tr><?php echo $profile->getName(); ?></tr>
+        <tr><?php echo $profile->getRequest(); ?></tr>
+        <tr><?php echo $profile->getResponse(); ?></tr>
+        <tr><?php echo $profile->getDuration(); ?></tr>
+        <tr><?php echo $profile->getSize(); ?></tr>
+    </tbody>
+    <?php } ?>
+</table>
